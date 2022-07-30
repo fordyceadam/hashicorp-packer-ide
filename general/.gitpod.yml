@@ -1,0 +1,19 @@
+tasks:
+  - name: Setup packer on container
+    init: |
+      curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+      sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+      sudo apt-get update && sudo apt-get install packer
+      export PATH=/usr/bin:$PATH
+      gp sync-done install
+    command: |
+      packer --version
+    openMode: tab-after
+  - name: General terminal window
+    init: gp sync-await install
+    command: echo "Working Terminal"
+vscode:
+  extensions:
+    - streetsidesoftware.code-spell-checker
+    - 4ops.packer
+    - HashiCorp.HCL
