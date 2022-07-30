@@ -1,0 +1,5 @@
+vscode:
+  extensions:
+    - streetsidesoftware.code-spell-checker
+    - 4ops.packer
+    - HashiCorp.HCL
