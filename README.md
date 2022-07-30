@@ -16,3 +16,8 @@ A Packer IDE making use of GitPods awesome functionality
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/fordyceadam/hashicorp-packer-ide/)
 
 > This will launch a new VSCode window, connected to a remote gitpod container. It will automatically install support for HCL and it includes a handy code spell checker for VSCode.
+
+## Learning Packer
+
+- [Install Packer](./install/README.md)
+- [General Packer IDE](./general/README.md)

@@ -1,6 +1,8 @@
 # Lab: Packer Install (GitPod)
 
-- Installing Packer in GitPod.
+> [Home](../README.md)
+
+## Installing Packer in GitPod.
 
 > This is the same process as you would complete if you were to install into WSL/WSL2 on your Windows PC or if you are on Mac, in the terminal.
 
