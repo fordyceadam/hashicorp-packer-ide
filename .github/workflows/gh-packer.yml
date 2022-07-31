@@ -1,5 +1,14 @@
 name: AWS AMI using Packer Config
 on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types:
+      - ready_for_review
+      - review_requested
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 4 * * *'
