@@ -35,14 +35,14 @@ jobs:
           # aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           # if you have/need it
           aws-region: us-east-1
-          working_directory: infrastructure/packer
+          working_directory: github_actions
 
       # Initialize Packer templates
       - name: Initialize Packer Template
         uses: hashicorp/packer-github-actions@master
         with:
           command: init
-          working_directory: infrastructure/packer
+          working_directory: github_actions
 
       # validate templates
       - name: Validate Template
@@ -51,7 +51,7 @@ jobs:
           command: validate
           arguments: -syntax-only
           target: ubuntu-aws.pkr.hcl
-          working_directory: infrastructure/packer
+          working_directory: github_actions
 
       # build artifact
       - name: Build Artifact
@@ -60,6 +60,6 @@ jobs:
           command: build
           arguments: "-color=false -on-error=abort"
           target: ubuntu-aws.pkr.hcl
-          working_directory: infrastructure/packer
+          working_directory: github_actions
         env:
           PACKER_LOG: 1
